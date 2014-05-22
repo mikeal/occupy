@@ -1,6 +1,6 @@
 var fs = require('fs')
   , path = require('path')
-  , deploy = require('../deploy')
+  , deploy = require('../deployer')
   , input = path.join(__dirname, '..', 'node_modules')
   , output = path.join(__dirname, 'deploy01')
   , tape = require('tape')

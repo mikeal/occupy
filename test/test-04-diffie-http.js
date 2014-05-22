@@ -1,5 +1,5 @@
 var request = require('request')
-  , server = require('../server')
+  , server = require('../service')
   , diffie = require('../diffie')
   , tape = require('tape')
   , fs = require('fs')

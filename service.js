@@ -9,7 +9,7 @@ var http = require('http')
   , authorizedKeys = require('authorized-keys')
   , jsonbody = require('json-body')
   , diffieModule = require('./diffie')
-  , deploy = require('./deploy')
+  , deploy = require('./deployer')
   , message = require('./message')
   ;
 

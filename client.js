@@ -1,7 +1,7 @@
 var diffie = require('./diffie')
   , qs = require('querystring')
   , once = require('once')
-  , deploy = require('./deploy')
+  , deploy = require('./deployer')
   , crypto = require('crypto')
   , request = require('request')
   , bopts = {headers:{'content-type':'application/octet-stream'}}
