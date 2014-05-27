@@ -6,6 +6,7 @@
   "directories": {
     "test": "test"
   },
+  "bin": "./cli",
   "dependencies": {
     "authorized-keys": "^0.1.0",
     "colors": "^0.6.2",
