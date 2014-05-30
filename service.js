@@ -77,6 +77,7 @@ module.exports = function (basepath, opts) {
       msg.log('Unpack Complete.')
       msg.log('Deploy ID:', ts)
       deploy.run(output, cipher, msg, function (e, _state) {
+        _state.ts = parseInt(ts)
         if (e) return msg.error('Deploy failed.')
         proxy.onDeploy(_state)
         msg.log('Deploy successful.')
