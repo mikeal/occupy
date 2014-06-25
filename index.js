@@ -1,4 +1,4 @@
-var sequest = require('../sequest')
+var sequest = require('sequest')
 
 function occupy (host, module, cb) {
   var seq = sequest.connect(host)
@@ -7,7 +7,7 @@ function occupy (host, module, cb) {
       seq.end()
       cb(e)
     })
-  }) 
+  })
   return seq
 }
 
