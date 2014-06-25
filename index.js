@@ -1,6 +1,14 @@
-var server = require('./server')
-  , deploy = require('./deployer')
-  ;
+var sequest = require('../sequest')
 
-module.exports = function () { return server.apply(server, arguments) }
-module.exports.push = deploy.push
+function occupy (host, module, cb) {
+  var seq = sequest.connect(host)
+  process.nextTick(function () {
+    module(seq, function (e) {
+      seq.end()
+      cb(e)
+    })
+  }) 
+  return seq
+}
+
+module.exports = occupy
